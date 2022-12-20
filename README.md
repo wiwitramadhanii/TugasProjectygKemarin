@@ -6,3 +6,19 @@ The "weather prediction dataset" is a novel tabular dataset that was specificall
 The dataset contains intuitively accessible weather observations from 18 locations in Europe. It was designed to be suitable for a large variety of different training goals, many of which are not easily giving way to unrealistically high prediction accuracy. Teachers or instructors thus can chose the difficulty of the training goals and thereby match it with the respective learner audience or lesson objective.
 The compact size and complexity of the dataset make it possible to quickly train common machine learning and deep learning models on a standard laptop so that they can be used in live hands-on sessions.
 
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import confusion_matrix, accuracy_score
+from sklearn.metrics import classification_report
+```
+Read Data
+```python
+df=pd.read_csv('/content/drive/MyDrive/Data Mining/seattle-weather.csv')
+df.sample(10)
+```
